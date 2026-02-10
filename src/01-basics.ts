@@ -20,9 +20,9 @@ const friend2 = {
 const friends = [friend1, friend2];
 console.log(friends[1]);
 
-interface Colleague { name: string; department: string; contact: { email: string; extension: number; }; }-------------------
-const colleague1: Colleague = {
-  name: "Ralph Graham",
+interface Colleague { name: string; department: string; contact: { email: string; extension: number; }; }
+ const colleague1: Colleague = {
+name: "Ralph Graham",
   department: "Engineering",
   contact: {
     email: "rgraham@company.com",
