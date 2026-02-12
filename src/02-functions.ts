@@ -48,3 +48,24 @@ console.log("Sort by name length (all):", sortColleagues(colleagues.current, (a,
 function addInterest(f: Friend, interest: string) { if (f.interests === undefined) { f.interests = [] } f.interests.push(interest); return f.interests; }
 
 console.log(addInterest(friends[0], 'Politics'))
+
+export type Department = "Engineering" | "Finance" | "HR";
+export interface ColleagueV2 {
+  name: string;
+  department: Department;    // *****
+  contact: {
+    email: string;
+    extension: number;
+    slack?: string;
+  };
+}
+
+export type Buddy = Friend | ColleagueV2;
+export type Administrator = Buddy | string | undefined
+
+export type BuddyList = {
+  name: string;
+  administrator: Administrator;
+  members: Buddy[];
+};
+
